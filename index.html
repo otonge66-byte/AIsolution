@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Student Buddy</title>
+
+    <!-- CSS inside HTML -->
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f6f8;
+            margin: 0;
+        }
+        nav {
+            background: #1e293b;
+            color: white;
+            padding: 15px;
+        }
+        section {
+            padding: 30px;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <h2>AI Student Buddy</h2>
+</nav>
+
+<section>
+    <h1>AI Solutions for Everyday Student Life in Bharat 🇮🇳</h1>
+    <input type="text" id="goal" placeholder="Enter your goal">
+    <br><br>
+    <button onclick="generatePlan()">Generate</button>
+    <p id="output"></p>
+</section>
+
+<!-- JavaScript inside HTML -->
+<script>
+    function generatePlan() {
+        let goal = document.getElementById("goal").value;
+
+        if (goal === "") {
+            document.getElementById("output").innerText =
+                "Please enter a goal!";
+        } else {
+            document.getElementById("output").innerText =
+                "AI Suggestion: Study daily, revise weekly, and take breaks.";
+        }
+    }
+</script>
+
+</body>
+</html>
